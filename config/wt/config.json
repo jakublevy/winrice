@@ -1,0 +1,86 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+
+    "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+
+    "confirmCloseAllTabs": false,
+    "copyOnSelect": false,
+    "copyFormatting": false,
+    "profiles":
+    {
+        "defaults":
+        {
+        },
+        "list":
+        [
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "Command Prompt",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu 20.10",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "commandline": "pwsh.exe -NoLogo",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe -NoLogo",
+                "hidden": false
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+    },
+    "schemes": [],
+    "actions":
+    [
+        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": "paste", "keys": "ctrl+v" },
+
+        { "command": "commandPalette", "keys": "ctrl+," },
+
+        // Press Ctrl+Shift+F to open the search box
+        { "command": "find", "keys": "ctrl+alt+f" },
+
+        //Pane zoom
+        { "command": "togglePaneZoom", "keys": "ctrl+f" },
+
+        { "command": "newTab", "keys": "ctrl+t"},
+
+        //Pane spliting
+        { "command": { "action": "splitPane", "split": "vertical" }, "keys": "ctrl+v" },
+        { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "ctrl+s" },
+        { "command": {"action": "sendInput", "input": "\u000dcls\u000d"}, "keys": "ctrl+l" },
+
+        //Pane navigation
+        { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+j" },
+        { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+h" },
+        { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+l" },
+        { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+k" },
+
+        //Pane resize
+        { "command": { "action": "resizePane", "direction": "down" }, "keys": "ctrl+alt+j" },
+        { "command": { "action": "resizePane", "direction": "left" }, "keys": "ctrl+alt+h" },
+        { "command": { "action": "resizePane", "direction": "right" }, "keys": "ctrl+alt+l" },
+        { "command": { "action": "resizePane", "direction": "up" }, "keys": "ctrl+alt+k" },
+
+        //Closing
+        { "command": "closePane", "keys": "ctrl+w" },
+        { "command": "closeWindow", "keys": "ctrl+q" }
+    ]
+}
