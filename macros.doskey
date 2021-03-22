@@ -4,10 +4,6 @@ cun=choco uninstall -x -y $*
 cs=choco search $*
 cl=choco list --local-only $*
 
-vim=nvim $*
-loud=speakers.bat $*
-quiet=headphones.bat $*
-
 gc=git clone $*
 gs=git status $*
 ga=git add $*
