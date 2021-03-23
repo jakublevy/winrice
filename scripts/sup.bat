@@ -7,6 +7,8 @@ set "f=prod_wd3200aaks"
 rem disk zalohovaci
 set "g=prod_wd2500ks"
 
+taskkill /F /IM revoSleep.exe /T >nul 2>&1
+
 rem no arguments given
 if "%*" == "" (
     call :spinup %d%
@@ -31,6 +33,7 @@ shift
 goto :parse_arguments
 
 :continue
+taskkill /F /IM revoSleep.exe /T >nul 2>&1
 exit /b
 
 :disable_timeout

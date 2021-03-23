@@ -7,6 +7,8 @@ set "f=prod_wd3200aaks"
 rem disk zalohovaci
 set "g=prod_wd2500ks"
 
+taskkill /F /IM revoSleep.exe /T >nul 2>&1
+
 rem no arguments given
 if "%*" == "" (
     call :spindown %d%
@@ -21,7 +23,7 @@ set "arg=%1"
 set pos=0
 :next_char
     set "char=!arg:~%pos%,1!"
-    echo !char! | findstr /I /R /C:[dfg] >nul
+    echo !char! | findstr /I /R /C:[dfg] >nul 2>&1
     if !errorlevel! equ 0 (
         for /F %%I IN ("!char!") do call :spindown !%%I!
     )
@@ -31,7 +33,7 @@ shift
 goto :parse_arguments
 
 :continue
-    rem taskkill /F /IM revoSleep.exe /T
+    taskkill /F /IM revoSleep.exe /T >nul
 exit /b
 
 :disable_timeout
@@ -47,7 +49,7 @@ exit /b
 
     rem sleep, offline
     revosleep -s %~1 -m OFFLINE
-    timeout /T 2 >nul
+    timeout /T 3 >nul
 
     call :enable_timeout
 exit /b
