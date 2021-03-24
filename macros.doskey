@@ -3,6 +3,7 @@ cua=choco upgrade all -y $*
 cun=choco uninstall -x -y $*
 cs=choco search $*
 cl=choco list --local-only $*
+co=choco outdated $*
 
 gc=git clone $*
 gs=git status $*
@@ -10,6 +11,7 @@ ga=git add $*
 gaa=git add -A $*
 gcd=git clone git@github.com:jakublevy/dotfiles.git $*
 gcw=git clone git@github.com:jakublevy/winrice.git $*
+gccpkgs=git clone git@github.com:jakublevy/chocopkgs.git $*
 
 pwd=cd $*
 cd=cd /d $* && %rice%\scripts\custom_prompt.bat
@@ -23,6 +25,7 @@ rmdir=rmdir /S /Q $*
 rd=rd /S /Q $*
 powershell=powershell -NoLogo $*
 pwsh=pwsh -NoLogo $*
+streamlink=streamlink --player mpv $*
 
 grep=grep --color=auto $*
 ydl=youtube-dl $*
