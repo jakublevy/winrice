@@ -1,0 +1,3 @@
+@echo off
+
+powershell -Command "$download_page = Invoke-WebRequest -UseBasicParsing -Uri 'https://github.com/ankitects/anki/releases'; $relative_url  = $download_page.links | Where-Object href -match '/ankitects/anki/releases/download/\d+\.\d+(\.\d+)*/anki-\d+\.\d+(\.\d+)*-windows.exe' | Select-Object -First 1 -expand href; $upstream_version = ([regex]::Match($relative_url, '(\d+\.\d+(\.\d+)*)-windows\.exe')).Groups[1].Value; $installed_version = ((choco list --local-only anki | select -Index 1) -split '[ ]')[1]; Write-Output ('Anki ' + $installed_version + ' [installed]'); Write-Output ('Anki ' + $upstream_version + ' [upstream]')"
