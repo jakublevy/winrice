@@ -1,4 +1,5 @@
 @echo off
+setlocal
 
 for %%I in (.) do set "drive=%%~dI"
 for %%I in (.) do set "currdir=%%~nxI"
@@ -22,3 +23,4 @@ rem for /F %%I in ('hostname') do set "host=%%I"
 rem set prompt
 rem prompt [%username%@%computername% %shortcurrpath%]$G$S
 prompt %shortcurrpath%$G$S
+endlocal
