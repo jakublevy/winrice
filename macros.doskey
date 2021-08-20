@@ -1,6 +1,7 @@
 cua=choco upgrade all -y $*
 cun=choco uninstall -x -y $*
 csearch=choco search $*
+cinst=choco install -y $*
 clist=choco list --local-only $*
 coutdated=choco outdated $*
 
