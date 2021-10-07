@@ -1,9 +1,12 @@
 cua=choco upgrade all -y $*
 cun=choco uninstall -x -y $*
-csearch=choco search $*
+cfind=choco find $*
 cinst=choco install -y $*
 clist=choco list --local-only $*
 coutdated=choco outdated $*
+cinfo=choco info $*
+cpin=choco pin $*
+
 
 gc=git clone $*
 gs=git status $*
@@ -16,12 +19,15 @@ gpfom=git push -f origin master $*
 gcd=git clone git@github.com:jakublevy/dotfiles.git $*
 gcwr=git clone git@github.com:jakublevy/winrice.git $*
 gccpkgs=git clone git@github.com:jakublevy/chocopkgs.git $*
+gcschool=git clone git@github.com:jakublevy/mff-student.git $*
 
 pwd=cd $*
 cd=cd /d $* && %rice%\scripts\custom_prompt.bat
 cdh=cd /d %userprofile% $* && %rice%\scripts\custom_prompt.bat 
 cdd=cd /d %userprofile%\Desktop $* && %rice%\scripts\custom_prompt.bat 
 cda=cd /d D:\jakub\Videos\Anime $* && %rice%\scripts\custom_prompt.bat
+cdr=cd /d %userprofile%\Repos $* && %rice%\scripts\custom_prompt.bat
+cdc=cd /d %userprofile%\Repos\chocopkgs $* && %rice%\scripts\custom_prompt.bat
 ip=ipconfig $*
 cp=xcopy /Y /H /C $*
 rm=del $*
