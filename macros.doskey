@@ -28,6 +28,7 @@ cdd=cd /d %userprofile%\Desktop $* && %rice%\scripts\custom_prompt.bat
 cda=cd /d D:\jakub\Videos\Anime $* && %rice%\scripts\custom_prompt.bat
 cdr=cd /d %userprofile%\Repos $* && %rice%\scripts\custom_prompt.bat
 cdc=cd /d %userprofile%\Repos\chocopkgs $* && %rice%\scripts\custom_prompt.bat
+cdwr=cd /d %rice% $* && %rice%\scripts\custom_prompt.bat
 ip=ipconfig $*
 cp=xcopy /Y /H /C $*
 rm=del $*
