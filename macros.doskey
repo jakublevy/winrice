@@ -40,7 +40,8 @@ pwsh=pwsh -NoLogo $*
 streamlink=streamlink --player mpv $*
 
 grep=grep --color=auto $*
-ydl=youtube-dl $*
+ydl=yt-dlp $*
+youtube-dl=yt-dlp $*
 
 cclean=cleanmgr /verylowdisk /autoclean /sagerun:5 $T powershell -File C:\tools\BCURRAN3\choco-cleaner.ps1 $*
 
