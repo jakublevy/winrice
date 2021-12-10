@@ -2,7 +2,8 @@ cua=choco upgrade all -y $*
 cun=choco uninstall -x -y $*
 cfind=choco find $*
 cinst=choco install -y $*
-clist=choco list --local-only $*
+clisti=choco list --local-only $*
+clist=choco list $*
 coutdated=choco outdated $*
 cinfo=choco info $*
 cpin=choco pin $*
@@ -39,11 +40,12 @@ powershell=powershell -NoLogo $*
 pwsh=pwsh -NoLogo $*
 streamlink=streamlink --player mpv $*
 
+mpvh=detach mpv --no-terminal $* >nul 2>&1
 grep=grep --color=auto $*
 ydl=yt-dlp $*
 youtube-dl=yt-dlp $*
 
-cclean=cleanmgr /verylowdisk /autoclean /sagerun:5 $T powershell -File C:\tools\BCURRAN3\choco-cleaner.ps1 $*
+cclean=cleanmgr /verylowdisk /autoclean /sagerun:5 $T powershell -File %ChocolateyToolsLocation%\BCURRAN3\choco-cleaner.ps1 $*
 
 
 A:=cd /d A: && %rice%\scripts\custom_prompt.bat $*

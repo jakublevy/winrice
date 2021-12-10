@@ -3,3 +3,4 @@
 choco feature enable -n=useRememberedArgumentsForUpgrades
 choco feature enable -n=allowGlobalConfirmation
 choco feature enable -n=useEnhancedExitCodes
+choco feature enable -n=skipPackageUpgradesWhenNotInstalled
