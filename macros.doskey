@@ -40,7 +40,7 @@ powershell=powershell -NoLogo $*
 pwsh=pwsh -NoLogo $*
 streamlink=streamlink --player mpv $*
 
-mpvh=detach mpv --no-terminal $* >nul 2>&1
+mpvq=quiet mpv --no-terminal $* >nul 2>&1
 grep=grep --color=auto $*
 ydl=yt-dlp $*
 youtube-dl=yt-dlp $*

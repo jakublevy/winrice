@@ -85,6 +85,7 @@ $pkgs = @{
     'python' = ''
     'qbittorrent' = ''
     'qpdf' = ''
+    'quiet' = ''
     'rufus' = ''
     'sed' = ''
     'sharpkeys' = ''
