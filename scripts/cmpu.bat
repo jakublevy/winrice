@@ -4,6 +4,7 @@ rem pwsh -Command "& { $global:au_Root = $env:userprofile + '\Repos\chocopkgs'; 
 setlocal
 set "olddir=%~dp0"
 cd "C:\Users\jakub\Repos\chocopkgs"
+git pull origin master
 pwsh -File "update_all.ps1"
 cd "%olddir%"
 endlocal
