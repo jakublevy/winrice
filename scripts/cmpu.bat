@@ -5,6 +5,6 @@ setlocal
 set "olddir=%~dp0"
 cd "C:\Users\jakub\Repos\chocopkgs"
 git pull origin master
-pwsh -File "update_all.ps1"
+pwsh -File update_all.ps1 -Name *
 cd "%olddir%"
 endlocal
