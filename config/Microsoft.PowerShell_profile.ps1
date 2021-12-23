@@ -1,5 +1,16 @@
 . (Join-Path $PSScriptRoot 'secret.ps1')
 
+function prompt {
+    $path = (Get-Location | Select-Object -exp Path)
+    $split = $path.Split('\')
+    if($split.Count -gt 2) {
+        "PS $($split[0])\...\$($split[$split.Count - 1])> "
+    }
+    else {
+        "PS $($split -join '\')> "
+    }
+}
+
 # Chocolatey autocompletion
 Import-Module “$env:ChocolateyInstall\helpers\chocolateyProfile.psm1” -Force
 

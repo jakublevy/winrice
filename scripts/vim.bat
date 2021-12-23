@@ -1,2 +1,2 @@
 @echo off
-call nvim
+call nvim %*
