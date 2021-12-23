@@ -1,10 +1,11 @@
-cua=choco upgrade all -y $*
+cup=choco upgrade -y $*
 cun=choco uninstall -x -y $*
 cfind=choco find $*
-cinst=choco install -y $*
+cfin=choco find $*
+cin=choco install -y $*
 clisti=choco list --local-only $*
 clist=choco list $*
-coutdated=choco outdated $*
+cout=choco outdated $*
 cinfo=choco info $*
 cpin=choco pin $*
 
