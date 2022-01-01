@@ -1,6 +1,7 @@
 $pkgs = @{
     '7.zip' = ''
     'adb' = ''
+    'altsnap' = ''
     'anki' = ''
     'au' = ''
     'audacity' = ''
@@ -49,6 +50,7 @@ $pkgs = @{
     'hxd' = ''
     'imageglass' = ''
     'imagemagick' = ''
+    'kdeconnect-kde' = ''
     'kindle-comic-converter' = ''
     'krita' = ''
     'llvm' = ''
