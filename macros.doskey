@@ -3,6 +3,7 @@ cun=choco uninstall -x -y $*
 cfind=choco find $*
 cfin=choco find $*
 cin=choco install -y $*
+cin-dry=choco install -n -y $*
 clisti=choco list --local-only $*
 clist=choco list $*
 cout=choco outdated $*

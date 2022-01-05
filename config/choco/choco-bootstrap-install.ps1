@@ -1,5 +1,5 @@
 $pkgs = @{
-    '7.zip' = ''
+    '7zip' = ''
     'adb' = ''
     'altsnap' = ''
     'anki' = ''
@@ -135,9 +135,9 @@ $pkgs = @{
 
 foreach($kv in $pkgs.GetEnumerator()) {
     if([string]::IsNullOrEmpty($kv.Value)) {
-        choco install $kv.Key
+        choco install $kv.Name
     }
     else {
-        choco install $kv.Key --params `"`'$kv.Value`'`"
+        choco install $($kv.Name) --params `"`'$($kv.Value)`'`"    
     }
 }
