@@ -22,6 +22,7 @@ function cun { choco uninstall -x -y @args }
 function cfin { choco find @args }
 function cfind { choco find @args }
 function cin { choco install -y @args }
+function cin-dry { choco install -n -y @args }
 function clisti { choco list --local-only @args }
 function clisti { choco list @args }
 function cout { choco outdated @args }
