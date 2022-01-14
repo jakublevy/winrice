@@ -31,7 +31,7 @@ if /I "%1" equ "/disconnect" (
 )
 
 :connect
-net use y: \\sshfs\%msuser%@u-pl%pc%.ms.mff.cuni.cz /user:%msuser% "%msuserpassword%"
+net use y: \\sshfs\%msuser%@u-pl%pc%.ms.mff.cuni.cz /user:%msuser% "%msuserpassword%" /persistent:no
 endlocal
 exit /b
 
