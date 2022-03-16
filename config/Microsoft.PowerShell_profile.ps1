@@ -35,8 +35,10 @@ function ga { git add @args }
 function gaa { git add -A @args }
 function gcm { git commit -m @args }
 function gca { git commit --amend @args}
-function gpuom { git push -u origin master @args }
-function gpfom { git push -f origin master @args }
+function gpl { git pull @args }
+function gplom { git pull origin master @args }
+function gpshom { git push -u origin master @args }
+function gpshfom { git push -f origin master @args }
 
 function gcd { git clone 'git@github.com:jakublevy/dotfiles.git' @args }
 function gcwr { git clone 'git@github.com:jakublevy/winrice.git' @args }
