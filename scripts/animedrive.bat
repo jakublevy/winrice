@@ -20,7 +20,7 @@ if /I "%1" equ "/disconnect" (
 )
 
 :connect
-net use z: %AnimeDrivePath%!%sshport% /user:anime "%AnimeDrivePassword%" /persistent:no
+net use z: %AnimeDrivePath%!%SrvSshPort% /user:anime "%AnimeDrivePassword%" /persistent:no
 exit /b
 
 :disconnect
