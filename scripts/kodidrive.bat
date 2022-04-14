@@ -20,7 +20,7 @@ if /I "%1" equ "/disconnect" (
 )
 
 :connect
-net use z: %KodiDrivePath%!%SrvSshPort% /user:kodi "%KodiDrivePassword%" /persistent:no
+net use z: %KodiDrivePath% /user:kodi "%KodiDrivePassword%" /persistent:no
 exit /b
 
 :disconnect
