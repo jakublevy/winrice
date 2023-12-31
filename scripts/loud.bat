@@ -1,2 +1,2 @@
 @echo off
-call speakers.bat
+call benq.bat
