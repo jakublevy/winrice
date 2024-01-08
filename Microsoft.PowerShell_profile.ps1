@@ -41,6 +41,7 @@ function gplo { git pull origin @args }
 function gplom { git pull origin master @args }
 function gpshom { git push -u origin master @args }
 function gpsho { git push -u origin @args }
+function gpshfo { git push -f origin @args }
 function gpshfom { git push -f origin master @args }
 
 function gcd { git clone 'git@github.com:jakublevy/dotfiles.git' @args }
