@@ -17,6 +17,7 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1" -Force
 Set-Alias -Name ip -Value ipconfig
 Set-Alias -Name ydl -Value yt-dlp
 Set-Alias -Name youtube-dl -Value yt-dlp
+Set-Alias -Name sudo -Value gsudo
 function cup { choco upgrade -y @args}
 function cun { choco uninstall -x -y @args }
 function cfin { choco find @args }
@@ -62,6 +63,7 @@ function mpvq { quiet mpv --no-terminal @args }
 function grep { grep --color=auto @args }
 function sha256 { ddh sha256 @args }
 function sha512 { ddh sha512 @args }
+
 
 function cclean { cleanmgr /verylowdisk /autoclean /sagerun:5 ; powershell -Command "& $env:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.ps1" @args }
 # Chocolatey profile
